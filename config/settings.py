@@ -146,7 +146,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 AWS_ACCESS_KEY_ID = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imprb3dld3ZvZmZ5anpsam9wbHB2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg5MDQ4NTcsImV4cCI6MjA3NDQ4MDg1N30.hWjItonGMwz2lK911R1eugn5pba_gCcn1RA0LrKWJXQ"
 AWS_SECRET_ACCESS_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imprb3dld3ZvZmZ5anpsam9wbHB2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1ODkwNDg1NywiZXhwIjoyMDc0NDgwODU3fQ.YjX0k6zXzrIzBc0vO2cimR9A-UHRNiHyqe92h_gy59Q"
 AWS_STORAGE_BUCKET_NAME = "media"
-AWS_S3_ENDPOINT_URL = "https://jkowewvoffyjzljoplpv.supabase.co/storage/v1/s3"
+AWS_S3_ENDPOINT_URL = "https://jkowewvoffyjzljoplpv.supabase.co/storage/v1/media"
 AWS_QUERYSTRING_AUTH = False
 
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
