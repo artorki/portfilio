@@ -148,5 +148,5 @@ AWS_SECRET_ACCESS_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 AWS_STORAGE_BUCKET_NAME = "media"
 AWS_S3_ENDPOINT_URL = "https://jkowewvoffyjzljoplpv.supabase.co/storage/v1/object/public/media/"
 AWS_QUERYSTRING_AUTH = False
-
+AWS_LOCATION = "media"
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
