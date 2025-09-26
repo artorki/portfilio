@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'portfolio',
     'resume',
     'socials',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,11 @@ if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+AWS_ACCESS_KEY_ID = "SUPABASE_SERVICE_ROLE_KEY"
+AWS_SECRET_ACCESS_KEY = "SUPABASE_ANON_KEY"
+AWS_STORAGE_BUCKET_NAME = "photo"
+AWS_S3_ENDPOINT_URL = "https://jkowewvoffyjzljoplpv.supabase.co/storage/v1/s3"
+AWS_QUERYSTRING_AUTH = False
+
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
