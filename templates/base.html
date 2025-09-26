@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artorki</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="bg-[#000000] text-[#F6F6F6]">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-[#111111]/70 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Right Side: Menu -->
+            <div>
+                <div class="hidden md:flex space-x-6 space-x-reverse text-base">
+                    <a href="{% url 'home' %}" class="nav-link active hover:text-[#A2D5C6] transition-colors duration-300">خانه</a>
+                    <a href="{% url 'writings' %}" class="nav-link hover:text-[#A2D5C6] transition-colors duration-300">نوشته‌ها</a>
+                    <a href="{% url 'portfolio' %}" class="nav-link hover:text-[#A2D5C6] transition-colors duration-300">نمونه‌کارها</a>
+                    <a href="{% url 'resume' %}" class="nav-link hover:text-[#A2D5C6] transition-colors duration-300">رزومه</a>
+                    <a href="{% url 'socials' %}" class="nav-link hover:text-[#A2D5C6] transition-colors duration-300">صفحات‌مجازی</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                </button>
+            </div>
+            <!-- Left Side: Brand Name -->
+            <a href="" class="text-2xl font-bold text-white">artorki</a>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#111111]/90 backdrop-blur-md">
+            <a href="" class="block text-center py-2 px-4 text-base hover:bg-black/20">خانه</a>
+            <a href="{% url 'writings' %}" class="block text-center py-2 px-4 text-base hover:bg-black/20">نوشته‌ها</a>
+            <a href="{% url 'portfolio' %}" class="block text-center py-2 px-4 text-base hover:bg-black/20">نمونه‌کارها</a>
+            <a href="{% url 'resume' %}" class="block text-center py-2 px-4 text-base hover:bg-black/20">رزومه</a>
+            <a href="{% url 'socials' %}" class="block text-center py-2 px-4 text-base hover:bg-black/20">صفحات‌مجازی</a>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#000000] border-t border-[#111111]">
+        <div class="container mx-auto px-6 py-12 text-center text-base">
+            <p class="mb-8 text-[#F6F6F6]/80">آماده همکاری در پروژه‌های خلاقانه و چالش‌برانگیز هستم.</p>
+            <p class="text-[#F6F6F6]/50 mt-12">&copy; 2025 - artorki_creative. تمام حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JS file -->
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>

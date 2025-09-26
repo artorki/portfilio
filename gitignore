@@ -1,0 +1,28 @@
+# Python
+*.py[cod]
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# Virtualenv
+venv/
+env/
+.venv/
+
+# Django
+*.sqlite3
+media/
+staticfiles/   # اگر collectstatic خروجی می‌ریزد این را هم نادیده بگیر
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env

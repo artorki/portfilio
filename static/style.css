@@ -1,0 +1,53 @@
+:root {
+    --bg-dark: #000000;
+    --bg-light: #111111;
+    --accent: #A2D5C6;
+    --highlight: #CFFFE2;
+    --text: #F6F6F6;
+}
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text);
+}
+.nav-link.active {
+    color: var(--accent);
+    font-weight: 700;
+}
+.slider-item {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.9);
+    /* CSS for ensuring snap stop works */
+    scroll-snap-stop: always;
+}
+.slider-item:hover {
+    transform: scale(1.03);
+    filter: brightness(1);
+}
+/* Hide scrollbar for slider container */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+.slider-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.pagination-dot {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.pagination-dot.active {
+    background-color: var(--accent);
+    transform: scale(1.25);
+}
+.writing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.writing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(162, 213, 198, 0.1), 0 4px 6px -2px rgba(162, 213, 198, 0.05);
+}
+#hero {
+    background-image: url('https://i.ibb.co/kgFhBL4V/gradient-background-web-optimized.jpg');
+    background-size: cover;
+    background-position: center;
+}
